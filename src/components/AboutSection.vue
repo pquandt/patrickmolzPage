@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="about-section">
-    <div class="container mx-auto px-6">
+    <div class="container">
       <div class="about-grid">
         <div class="about-image">
           <div class="image-container">

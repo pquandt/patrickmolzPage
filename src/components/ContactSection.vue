@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="contact-section">
-    <div class="container mx-auto px-6">
+    <div class="container">
       <div class="contact-content">
         <div class="title-wrapper">
           <h2 class="section-title">Kontakt</h2>
@@ -311,27 +311,6 @@ onMounted(() => {
   }
 }
 
-.success-message,
-.error-message-toast {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  color: white;
-  font-weight: 500;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  animation: slideIn 0.3s ease-out;
-}
-
-.success-message {
-  background: linear-gradient(135deg, #4ECDC4 0%, #45B7D1 100%);
-}
-
-.error-message-toast {
-  background: linear-gradient(135deg, #FF6B6B 0%, #FBC2EB 100%);
-}
 
 @keyframes slideIn {
   from {
@@ -344,62 +323,4 @@ onMounted(() => {
   }
 }
 
-.submit-button {
-  background: linear-gradient(135deg, #45B7D1 0%, #4ECDC4 50%, #96C93D 100%);
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  opacity: 0.95;
-  box-shadow: 0 4px 6px rgba(69, 183, 209, 0.2);
-}
-
-.submit-button:hover {
-  opacity: 1;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(69, 183, 209, 0.4);
-  background: linear-gradient(135deg, #2D9BB7 0%, #3DB8A8 50%, #7AB82D 100%);
-  filter: brightness(1.1);
-}
-
-.submit-button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 6px rgba(69, 183, 209, 0.2);
-}
-
-.submit-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-.submit-button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
-}
-
-.submit-button:hover::after {
-  transform: translateX(100%);
-}
-
-@media (max-width: 768px) {
-  .submit-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
-  }
-}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-section">
-    <div class="container mx-auto px-6">
+    <div class="container">
       <div class="footer-content">
   
         <div class="footer-copyright">
@@ -34,18 +34,5 @@ const currentYear = computed(() => new Date().getFullYear());
 .footer-copyright {
   color: var(--text-secondary);
   font-size: 0.875rem;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-@media (max-width: 768px) {
-  .footer-links {
-    gap: 1.5rem;
-  }
 }
 </style>

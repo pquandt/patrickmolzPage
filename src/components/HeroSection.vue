@@ -1,6 +1,6 @@
 <template>
   <section id="hero" class="hero-section">
-    <div class="container mx-auto px-6">
+    <div class="container">
       <div class="hero-content">
         <h1 class="hero-title">
           <span class="gradient-text">Patrick Molz</span>
