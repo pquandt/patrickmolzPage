@@ -250,7 +250,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 80px 0;
+    padding: 120px 30px;
   }
   
   .about-grid {
@@ -258,10 +258,6 @@ onMounted(() => {
     gap: 3rem;
   }
   
-  .section-title {
-    font-size: 2rem;
-  }
-
   .about-image {
     max-width: 300px;
   }
@@ -270,8 +266,8 @@ onMounted(() => {
     font-size: 1rem;
   }
   
-  .text-card {
-    padding: 1.5rem;
+  .section-title {
+    font-size: 2rem;
   }
 }
 </style>

@@ -235,7 +235,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 120px 0;
+    padding: 120px 30px;
   }
   
   .section-title {
