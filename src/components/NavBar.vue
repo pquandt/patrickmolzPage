@@ -56,30 +56,61 @@ const toggleMobileMenu = () => {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-content {
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .brand-link {
-  color: var(--text-primary);
+  background: linear-gradient(90deg, #6a7b8a, #4a5b6a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   text-decoration: none;
-  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  opacity: 0.8;
 }
 
 .brand-link:hover {
-  color: var(--primary-color);
+  opacity: 1;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, #5a6b7a, #3a4b5a);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.brand-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #6a7b8a, #4a5b6a);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  opacity: 0.2;
 }
 
 .navbar-links {
@@ -91,11 +122,32 @@ const toggleMobileMenu = () => {
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
   transition: color 0.3s ease;
 }
 
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text-secondary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
 .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .mobile-menu-button {
@@ -182,6 +234,23 @@ const toggleMobileMenu = () => {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+  }
+  
+  .navbar-links {
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.875rem;
+  }
+
   .navbar-links {
     display: none;
   }

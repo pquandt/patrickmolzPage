@@ -55,16 +55,51 @@ onMounted(() => {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 120px 0;
-  background: linear-gradient(135deg, var(--background-light) 0%, white 100%);
+  justify-content: center;
   position: relative;
   overflow: hidden;
+  background: url('@/assets/images/hero-background.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(161, 140, 209, 0.3) 0%, transparent 50%);
+  z-index: 1;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  z-index: 2;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--text-primary);
+  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .hero-title {
@@ -81,12 +116,14 @@ onMounted(() => {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-subtitle {
   font-size: 2rem;
   font-weight: 600;
   color: var(--text-secondary);
+  opacity: 0.9;
 }
 
 .hero-description {
@@ -94,6 +131,7 @@ onMounted(() => {
   line-height: 1.6;
   color: var(--text-secondary);
   margin-bottom: 3rem;
+  opacity: 0.8;
 }
 
 .hero-cta {
@@ -134,6 +172,21 @@ onMounted(() => {
   
   .hero-description {
     font-size: 1.125rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
   }
 }
 </style>

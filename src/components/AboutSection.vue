@@ -82,9 +82,9 @@ onMounted(() => {
 
 <style scoped>
 .about-section {
-  background-color: white;
   padding: 120px 0;
   position: relative;
+  background-color: white;
   overflow: hidden;
 }
 
@@ -94,12 +94,29 @@ onMounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  background: linear-gradient(135deg, 
-    rgba(var(--primary-color-rgb), 0.03) 0%,
-    rgba(var(--accent-color-rgb), 0.03) 100%
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(78, 205, 196, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(45, 183, 209, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(150, 201, 61, 0.15) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.about-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(78, 205, 196, 0.2) 25%,
+    rgba(45, 183, 209, 0.2) 50%,
+    rgba(150, 201, 61, 0.2) 75%,
+    transparent 100%
   );
-  z-index: 0;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
 
 .about-grid {
@@ -144,7 +161,6 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   transition: transform 0.6s ease;
   position: relative;
   z-index: 2;
@@ -160,7 +176,7 @@ onMounted(() => {
   right: -20px;
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  background: linear-gradient(135deg, #4ECDC4 0%, #45B7D1 100%);
   border-radius: 50%;
   opacity: 0.1;
   z-index: 0;
@@ -201,9 +217,9 @@ onMounted(() => {
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, 
-    var(--primary-color) 0%,
-    var(--accent-color) 50%,
-    var(--primary-color) 100%
+    #4ECDC4 0%,
+    #45B7D1 50%,
+    #4ECDC4 100%
   );
   border-radius: 1px;
   opacity: 0.5;
@@ -268,6 +284,24 @@ onMounted(() => {
   
   .section-title {
     font-size: 2rem;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(0, 10px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
   }
 }
 </style>
