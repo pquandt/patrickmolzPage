@@ -29,7 +29,7 @@
             <div class="text-card">
               <div class="card-decoration"></div>
               <p class="text-lg">
-                Meine Expertise liegt in der Entwicklung von skalierbaren Frontend-Architekturen mit Vue.js, React und TypeScript, wobei ich besonderen Wert auf Code-Qualität, Performance und Benutzererfahrung lege.
+                Meine Expertise liegt in der Entwicklung von skalierbaren Frontend-Architekturen mit Next.js, Vue.js, und TypeScript, wobei ich besonderen Wert auf Code-Qualität, Performance und Benutzererfahrung lege.
               </p>
             </div>
           </div>
