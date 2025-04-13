@@ -69,12 +69,9 @@ onMounted(() => {
 
 <style scoped>
 .contact-section {
-  padding: 160px 0;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
+  padding: 120px 0;
   position: relative;
-  background-color: white;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   overflow: hidden;
 }
 
@@ -86,11 +83,9 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(45, 183, 209, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(150, 201, 61, 0.2) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(45, 183, 209, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.08) 0%, transparent 70%);
   z-index: 1;
-  animation: float 12s ease-in-out infinite;
 }
 
 .contact-section::after {
@@ -102,13 +97,9 @@ onMounted(() => {
   height: 1px;
   background: linear-gradient(90deg, 
     transparent 0%,
-    rgba(45, 183, 209, 0.3) 25%,
-    rgba(78, 205, 196, 0.3) 50%,
-    rgba(150, 201, 61, 0.3) 75%,
+    rgba(45, 183, 209, 0.1) 50%,
     transparent 100%
   );
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 2;
 }
 
 .contact-content {
@@ -199,6 +190,8 @@ onMounted(() => {
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .email-link::before {
@@ -209,16 +202,17 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, 
-    rgba(45, 183, 209, 0.1) 0%, 
-    rgba(78, 205, 196, 0.1) 100%
+    rgba(45, 183, 209, 0.05) 0%, 
+    rgba(78, 205, 196, 0.05) 100%
   );
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .email-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .email-link:hover::before {
@@ -234,12 +228,13 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   color: white;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 6px rgba(69, 183, 209, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(69, 183, 209, 0.1);
 }
 
 .email-link:hover .email-icon-wrapper {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(69, 183, 209, 0.15);
 }
 
 .email-icon {
@@ -251,7 +246,8 @@ onMounted(() => {
   font-size: 1.75rem;
   font-weight: 600;
   color: #2c3e50;
-  transition: color 0.4s ease;
+  transition: all 0.4s ease;
+  letter-spacing: -0.02em;
 }
 
 .email-link:hover .email-address {

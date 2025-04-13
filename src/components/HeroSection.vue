@@ -58,8 +58,7 @@ onMounted(() => {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: url('@/assets/images/hero-background.svg') no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
 .hero-section::before {
@@ -70,11 +69,9 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(161, 140, 209, 0.3) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(45, 183, 209, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.08) 0%, transparent 70%);
   z-index: 1;
-  animation: pulse 8s ease-in-out infinite;
 }
 
 .hero-section::after {
@@ -85,11 +82,12 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg,
-    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.2) 0%,
     transparent 50%,
-    rgba(255, 255, 255, 0.3) 100%
+    rgba(255, 255, 255, 0.2) 100%
   );
   z-index: 2;
+  opacity: 0.5;
 }
 
 .hero-content {

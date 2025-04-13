@@ -84,7 +84,7 @@ onMounted(() => {
 .about-section {
   padding: 120px 0;
   position: relative;
-  background-color: white;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   overflow: hidden;
 }
 
@@ -96,9 +96,8 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(78, 205, 196, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(45, 183, 209, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(150, 201, 61, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(45, 183, 209, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.08) 0%, transparent 70%);
   z-index: 1;
 }
 
@@ -108,15 +107,12 @@ onMounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 1px;
   background: linear-gradient(90deg, 
     transparent 0%,
-    rgba(78, 205, 196, 0.2) 25%,
-    rgba(45, 183, 209, 0.2) 50%,
-    rgba(150, 201, 61, 0.2) 75%,
+    rgba(45, 183, 209, 0.1) 50%,
     transparent 100%
   );
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
 
 .about-grid {
